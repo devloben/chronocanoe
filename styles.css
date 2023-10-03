@@ -1,31 +1,42 @@
+*, ::before, ::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ :root {
+   font-size: 62.5%;
+ }
+
 body {
    font-family: Arial, sans-serif;
    text-align: center;
+   background: gray;
 }
 
 .container {
-   margin: 50px auto;
-   max-width: 80%;
-   border: 1px solid gray;
-   border-radius: 5px;
+   margin: 0rem auto;
+   padding-top: 2rem;
+   max-width: 50rem;
+   height: 100vh;
+   background: white;
+   border: .5rem solid gray;
+   border-radius: 1.5rem;
+
 }
 
 .timer {
-   font-size: 3rem;
-}
-
-.buttons {
-   margin-top: 20px;
-   
+   font-size: 4rem;
 }
 
 button {
-   font-size: 1.2rem;
-   padding: 10px 20px;
-   margin: 5px;
-   width: 60%;
+   font-size: 2rem;
+   padding: 1rem 2rem;
+   margin: .8rem;
+   width: 70%;
 }
 
 .saved-time, .penalty-display, .total-display{
-   font-size: 1.5rem;
+   font-size: 2rem;
+   margin: 1rem;
 }

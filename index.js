@@ -21,7 +21,7 @@ startStopButton.addEventListener("click", function() {
         clearInterval(timerInterval);
         startStopButton.textContent = "GO";
         savedTime = parseFloat(timerElement.textContent); // Sauvegarde du temps affiché
-        savedTimeElement.textContent = `Temps pur : ${savedTime.toFixed(1)} secondes`; // Affichage du temps sauvegardé
+        savedTimeElement.textContent = `Temps pur : ${savedTime.toFixed(1)} s`; // Affichage du temps sauvegardé
         running = false;
     } else {
         startTime = Date.now() - (parseFloat(timerElement.textContent) * 1000);
@@ -35,11 +35,11 @@ newTimeButton.addEventListener("click", function() {
     clearInterval(timerInterval);
     timerElement.textContent = "0.0";
     savedTime = 0; // Sauvegarde du temps affiché
-    savedTimeElement.textContent = `Temps pur : -.-`; // Affichage du temps sauvegardé
+    savedTimeElement.textContent = `-.-`; // Affichage du temps sauvegardé
     penalties = 0;
     penaltyDisplayElement.textContent = `--`;
     totalTime = 0;
-    totalDisplay.textContent = `Total : -.-`;
+    totalDisplay.textContent = `-.-`;
 
     startStopButton.textContent = "GO";
     running = false;
@@ -62,11 +62,11 @@ addPenalty50Button.addEventListener("click", function() {
 
 saveButton.addEventListener("click", function() {
     totalTime = savedTime + penalties; // Calcul de la somme
-    totalDisplay.textContent = `Total : ${totalTime} secondes`; // Affichage du total
+    totalDisplay.textContent = `Total : ${totalTime} s`; // Affichage du total
 });
 
 function updatePenaltyDisplay() {
-    penaltyDisplayElement.textContent = `Pénalités : ${penalties} secondes`;
+    penaltyDisplayElement.textContent = `Pénalités : ${penalties} s`;
 }
 
 function updateTimer() {
