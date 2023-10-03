@@ -12,17 +12,20 @@ body {
    font-family: Arial, sans-serif;
    text-align: center;
    background: gray;
+   min-width: 25rem;
 }
 
 .container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
    margin: 0rem auto;
-   padding-top: 2rem;
+   padding: 2rem;
    max-width: 50rem;
    height: 100vh;
    background: white;
-   border: .5rem solid gray;
+   border: .6rem solid gray;
    border-radius: 1.5rem;
-
 }
 
 .timer {
@@ -32,11 +35,15 @@ body {
 button {
    font-size: 2rem;
    padding: 1rem 2rem;
-   margin: .8rem;
-   width: 70%;
+   width: 100%;
 }
 
 .saved-time, .penalty-display, .total-display{
    font-size: 2rem;
    margin: 1rem;
+}
+
+.penalties {
+   display: flex;
+   gap:1rem
 }
